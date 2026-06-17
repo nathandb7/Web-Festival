@@ -6,7 +6,7 @@
     padding: 5rem 0;
 
     h3, p {
-        text-align: center ;
+        text-align: center;
         color: v.$blanco;
     }
     .dia {
@@ -15,9 +15,18 @@
     }
 }
 
+.escenarios-contenedor {
+    @include m.tablet {
+        @include m.grid(2, 5rem);
+    }
+
+    p {
+        color: v.$negro;
+    }
+}
+
 .escenario {
     padding-top: 2rem;
-
     .nombre-escenario {
         &:after {
             content: '';
@@ -30,16 +39,6 @@
             margin: 2rem auto 0 auto;
         }
     }
- }
-
-.escenarios-contenedor {
-    @include m.tablet { 
-        @include m.grid(2, 5rem);
-     }
-
-     p {
-        color: v.$negro;
-     }
 }
 .edm .nombre-escenario:after {
     background-image: url(../img/icono_edm.png);
@@ -61,15 +60,12 @@
 
 .bg-amarillo {
     background-color: v.$amarillo;
-
     li:nth-child(odd) {
         background-color: darken(v.$amarillo, 15%);
     }
 }
-
 .bg-verde {
     background-color: v.$verde;
-    
     li:nth-child(odd) {
         background-color: darken(v.$verde, 10%);
     }

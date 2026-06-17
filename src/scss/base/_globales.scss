@@ -1,9 +1,11 @@
 @use 'variables' as v;
+
 html {
     font-size: 62.5%;
     box-sizing: border-box;
+    scroll-padding-top: 0rem;
 }
-*,
+*, 
 *:before,
 *:after {
     box-sizing: inherit;
@@ -15,6 +17,9 @@ body {
     &.fijar-body {
         overflow: hidden;
     }
+    &.body-scroll {
+        padding-top: 8.6rem;
+    }
 }
 
 p {
@@ -22,7 +27,6 @@ p {
     color: v.$negro;
     line-height: 1.5;
 }
-
 .contenedor {
     width: 95%;
     max-width: 120rem;

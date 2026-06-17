@@ -1,214 +1,286 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nathan de Barros">
     <title>Rock & EDM Festival</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="build/css/app.css">
+    <link rel="stylesheet" href="build/css/design-mdnt.css">
 </head>
-
 <body>
+    <header class="header irl-header">
+        <div class="irl-header__inner">
+            <a class="irl-logo" href="#inicio" aria-label="Inicio Rock & EDM Festival">Rock & EDM</a>
 
-    <header class="header">
-        <div class="contenedor contenido-header">
-            <h1>Rock & EDM Festival</h1>
+            <button class="irl-menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-            <nav class="navegacion-principal">
-                <a href="#">Line Up</a>
-                <a href="#">Galeria</a>
-                <a href="#">Boletos</a>
+            <nav id="menu-principal" class="navegacion-principal irl-nav" aria-label="Principal">
+                <a href="#inicio">Inicio</a>
+                <a href="#experiencia">Experiencia</a>
+                <a href="#lineup">Line Up</a>
+                <a href="#galeria">Galeria</a>
+                <a href="#boletos">Boletos</a>
+                <a href="#contacto">Contacto</a>
             </nav>
+
+            <div class="irl-header__cta">
+                <a class="irl-btn irl-btn--solid" data-magnetic href="#boletos">Comprar <span class="irl-btn__arrow">-&gt;</span></a>
+            </div>
         </div>
     </header>
 
-    <div class="video">
-        <div class="overlay">
-            <div class="contenedor contenido-video">
-                <h2>Rock & EDM Festival</h2>
-                <p>Agosto 2023, Rivera, Uruguay</p>
+    <main id="inicio">
+        <section class="video irl-hero" aria-label="Rock & EDM Festival">
+            <div class="irl-hero__media" aria-hidden="true">
+                <video autoplay muted loop playsinline>
+                    <source src="video/concierto.mp4" type="video/mp4">
+                    <source src="video/concierto.ogg" type="video/ogg">
+                    <source src="video/concierto.webm" type="video/webm">
+                </video>
             </div>
-        </div>
-        <video autoplay muted loop>
-            <source src="video/concierto.mp4" type="video/mp4">
-            <source src="video/concierto.ogg" type="video/ogg">
-            <source src="video/concierto.webm" type="video/webm">
-        </video>
-    </div>
 
-    <section class="contenedor sobre-festival">
-        <div class="imagen">
-            <picture>
-                <source srcset="build/img/imagen_vocalista.avif" type="image/avif">
-                <source srcset="build/img/imagen_vocalista.webp" type="image/webp">
+            <div class="overlay irl-hero__overlay">
+                <div class="contenedor contenido-video irl-hero__content">
+                    <div class="irl-hero__grid">
+                        <div>
+                            <p class="irl-eyebrow" data-reveal>Julio 2026 / Antel Arena, Uruguay</p>
+                            <h1 class="irl-hero__title" data-reveal>
+                                Rock &amp; EDM <span class="irl-highlight-lime">Festival</span>
+                            </h1>
+                        </div>
 
-                <img loading="lazy" width="200" height="300" src="build/img/imagen_vocalista.jpg"
-                    alt="Imagen vocalista">
-            </picture>
+                        <div class="irl-hero__side" data-reveal>
+                            <p>Dos noches, dos escenarios y una experiencia inmersiva de luces, energia y sonido en vivo.</p>
+                            <div class="irl-hero__actions">
+                                <a class="irl-btn irl-btn--solid" data-magnetic href="#boletos">Ver boletos <span class="irl-btn__arrow">-&gt;</span></a>
+                                <a class="irl-btn" href="#lineup">Explorar lineup</a>
+                            </div>
+                        </div>
+                    </div>
 
-        </div>
-        <div class="contenido-festival">
-            <h2>Rock & EDM Festival</h2>
-            <p class="fecha">Agosto 2023, Rivera, Uruguay</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam quo nisi numquam laboriosam rem, magni
-                dolores nemo ab! Ea omnis beatae fuga ut nam quod delectus praesentium nulla porro optio?
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum aliquam dolorum consequatur velit vero.
-                Fugiat quos, numquam debitis error voluptas porro eum maxime facilis voluptatem officia iusto reiciendis
-                esse dolores!
-            </p>
-        </div>
-    </section>
-
-    <section class="lineup">
-        <h3>Line Up</h3>
-
-        <p class="dia">Viernes 21</p>
-        <div class="escenarios-contenedor contenedor">
-            <div class="escenario rock bg-amarillo">
-                <p class="nombre-escenario">Escenario Rock</p>
-                <ul class="calendario">
-                    <li>
-                        24:00 | <span>Metallica</span>
-                    </li>
-                    <li>
-                        22:00 | <span>Pearl Jam</span>
-                    </li>
-                    <li>
-                        20:00 | <span>KoRn</span>
-                    </li>
-                    <li>
-                        19:00 | <span>Muse</span>
-                    </li>
-                    <li>
-                        18:00 | <span>Breaking Benjamin</span>
-                    </li>
-                    <li>
-                        17:00 | <span>30 Seconds to Mars</span>
-                    </li>
-                </ul>
-            </div> <!--.escenario -->
-
-            <div class="escenario edm bg-verde">
-                <p class="nombre-escenario">Escenario EDM</p>
-                <ul class="calendario">
-                    <li>
-                        24:00 | <span>Deadmau5</span>
-                    </li>
-                    <li>
-                        22:00 | <span>Tïesto</span>
-                    </li>
-                    <li>
-                        20:00 | <span>Hardwell</span>
-                    </li>
-                    <li>
-                        19:00 | <span>Dash Berlin</span>
-                    </li>
-
-                    <li>
-                        18:00 | <span>Fedde Legrand</span>
-                    </li>
-                    <li>
-                        17:00 | <span>Audien</span>
-                    </li>
-                </ul>
-            </div> <!--.escenario -->
-        </div><!--.escenarios-contenedor-->
-
-        <p class="dia">Sábado 22</p>
-        <div class="escenarios-contenedor contenedor">
-            <div class="escenario rock bg-verde">
-                <p class="nombre-escenario">Escenario Rock</p>
-                <ul class="calendario">
-                    <li>
-                        24:00 | <span>Red Hot Chili Peppers</span>
-                    </li>
-                    <li>
-                        22:00 | <span>The Killers</span>
-                    </li>
-                    <li>
-                        20:00 | <span>Deftones</span>
-                    </li>
-                    <li>
-                        19:00 | <span>Limp Bizkit</span>
-                    </li>
-
-                    <li>
-                        18:00 | <span>Papa Roach</span>
-                    </li>
-                    <li>
-                        17:00 | <span>Lamb of God</span>
-                    </li>
-                </ul>
-            </div> <!--.escenario -->
-
-            <div class="escenario edm bg-amarillo">
-                <p class="nombre-escenario">Escenario EDM</p>
-                <ul class="calendario">
-                    <li>
-                        24:00 | <span>Paul Van Dyk</span>
-                    </li>
-                    <li>
-                        22:00 | <span>Armin Van Buuren</span>
-                    </li>
-                    <li>
-                        20:00 | <span>Above & Beyond</span>
-                    </li>
-                    <li>
-                        19:00 | <span>Eric Prdyz</span>
-                    </li>
-
-                    <li>
-                        18:00 | <span>Ferry Corsten</span>
-                    </li>
-                    <li>
-                        17:00 | <span>Vini Vici</span>
-                    </li>
-                </ul>
-            </div> <!--.escenario -->
-        </div><!--.escenarios-contenedor-->
-
-    </section>
-
-    <section class="galeria contenedor">
-        <h3>Galeria</h3>
-
-        <ul class="galeria-imagenes"></ul>
-    </section>
-
-    <section class="boletos bg-verde">
-        <h3>Boletos</h3>
-
-        <div class="contenedor contenedor-boletos">
-            <div class="basico pase">
-                <p>Pase 1 Día</p>
-                <header class="pase-header">
-                    <p>Incluye</p>
-                </header>
-                    <ul>
-                        <li></li>
-                    </ul>
-                <footer class="pase-footer">
-                    <p>$100</p>
-                </footer>
+                    <div class="irl-logo-row" aria-label="Experiencias del festival" data-reveal>
+                        <span>Rock Stage</span>
+                        <span>EDM Stage</span>
+                        <span>VIP Access</span>
+                        <span>Food Zone</span>
+                        <span>Live Shows</span>
+                        <span>Night Lights</span>
+                    </div>
+                </div>
             </div>
-            <div class="premium pase">
-                <p>Pase 2 Día</p>
-                <header class="pase-header">
+        </section>
 
-                </header>
-                <footer class="pase-footer">
-
-                </footer>
+        <section id="experiencia" class="contenedor sobre-festival irl-intro">
+            <div class="imagen irl-intro__image" data-reveal>
+                <picture>
+                    <source srcset="build/img/imagen_vocalista.avif" type="image/avif">
+                    <source srcset="build/img/imagen_vocalista.webp" type="image/webp">
+                    <img loading="lazy" width="200" height="300" src="build/img/imagen_vocalista.jpg" alt="Vocalista en concierto con luces de festival">
+                </picture>
             </div>
-        </div>
-    </section>
+            <div class="contenido-festival irl-intro__copy">
+                <p class="irl-eyebrow" data-reveal>La experiencia</p>
+                <h2 class="irl-intro__title" data-reveal>
+                    Una celebracion nocturna para vivir la musica <span class="irl-highlight-lime">sin pausa</span>.
+                </h2>
+                <p class="fecha" data-reveal>Julio 2026, Antel Arena, Uruguay</p>
+                <p class="irl-intro__text" data-reveal>Una experiencia creada para reunir a fanaticos del rock y la electronica en dos noches de shows, visuales inmersivas, espacios gastronomicos y momentos pensados para vivir la energia del festival de principio a fin.</p>
+            </div>
+        </section>
 
+        <section id="lineup" class="lineup irl-work">
+            <div class="irl-container">
+                <div class="irl-work__head">
+                    <div>
+                        <p class="irl-eyebrow" data-reveal>Line Up</p>
+                        <h2 class="irl-work__title" data-reveal>
+                            Dos escenarios. Una agenda de <span class="irl-highlight-lime">alto voltaje</span>.
+                        </h2>
+                        <p class="irl-work__subtitle" data-reveal>Rock pesado, himnos alternativos y electronica de madrugada en una programacion pensada para moverse de principio a fin.</p>
+                    </div>
+                    <a class="irl-btn" href="#galeria" data-reveal>Ver galeria</a>
+                </div>
+
+                <p class="dia" data-reveal>Viernes 24</p>
+                <div class="escenarios-contenedor contenedor irl-lineup-grid">
+                    <div class="escenario rock bg-amarillo irl-lineup-card" data-reveal>
+                        <p class="nombre-escenario">Escenario Rock</p>
+
+                        <ul class="calendario">
+                            <li>24:00 | <span>Metallica</span></li>
+                            <li>22:00 | <span>Pearl Jam</span></li>
+                            <li>20:00 | <span>KoRn</span></li>
+                            <li>19:00 | <span>Muse</span></li>
+                            <li>18:00 | <span>Breaking Benjamin</span></li>
+                            <li>17:00 | <span>30 Seconds to Mars</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="escenario edm bg-verde irl-lineup-card" data-reveal>
+                        <p class="nombre-escenario">Escenario EDM</p>
+
+                        <ul class="calendario">
+                            <li>24:00 | <span>Deadmau5</span></li>
+                            <li>22:00 | <span>Tiesto</span></li>
+                            <li>20:00 | <span>Hardwell</span></li>
+                            <li>19:00 | <span>Dash Berlin</span></li>
+                            <li>18:00 | <span>Fedde Legrand</span></li>
+                            <li>17:00 | <span>Audien</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p class="dia" data-reveal>Sabado 25</p>
+                <div class="escenarios-contenedor contenedor irl-lineup-grid">
+                    <div class="escenario rock bg-verde irl-lineup-card" data-reveal>
+                        <p class="nombre-escenario">Escenario Rock</p>
+
+                        <ul class="calendario">
+                            <li>24:00 | <span>Red Hot Chili Peppers</span></li>
+                            <li>22:00 | <span>The Killers</span></li>
+                            <li>20:00 | <span>Deftones</span></li>
+                            <li>19:00 | <span>Limp Bizkit</span></li>
+                            <li>18:00 | <span>Papa Roach</span></li>
+                            <li>17:00 | <span>Lamb of God</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="escenario edm bg-amarillo irl-lineup-card" data-reveal>
+                        <p class="nombre-escenario">Escenario EDM</p>
+
+                        <ul class="calendario">
+                            <li>24:00 | <span>Paul Van Dyk</span></li>
+                            <li>22:00 | <span>Armin Van Buuren</span></li>
+                            <li>20:00 | <span>Above &amp; Beyond</span></li>
+                            <li>19:00 | <span>Eric Prydz</span></li>
+                            <li>18:00 | <span>Ferry Corsten</span></li>
+                            <li>17:00 | <span>Vini Vici</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeria" class="galeria contenedor irl-social">
+            <div class="irl-social__head">
+                <p class="irl-eyebrow" data-reveal>Galeria</p>
+                <h2 class="irl-social__title" data-reveal>
+                    Momentos que quedan vibrando <span class="irl-highlight-violet">despues del show</span>.
+                </h2>
+                <p class="irl-social__text" data-reveal>Una seleccion visual del publico, las luces, el backstage y la energia que define al festival.</p>
+            </div>
+
+            <ul class="galeria-imagenes irl-social-track" aria-label="Galeria de imagenes del festival"></ul>
+        </section>
+
+        <section id="boletos" class="boletos bg-verde irl-services">
+            <div class="irl-container">
+                <div class="irl-services__head" data-reveal>
+                    <p class="irl-eyebrow">Boletos</p>
+                    <h2 class="irl-services__title">Elegí tu pase y entra al <span class="irl-highlight-violet">festival</span>.</h2>
+                </div>
+
+                <div class="contenedor contenedor-boletos irl-services__grid">
+                    <div class="basico pase irl-ticket-card" data-reveal>
+                        <p class="nombre-pase">Pase 1 Dia</p>
+                        <header class="pase-header">
+                            <p>Incluye</p>
+                        </header>
+                        <div class="pase-body">
+                            <ul>
+                                <li>Acceso a ambos escenarios</li>
+                                <li>Comida y Bebida</li>
+                            </ul>
+                        </div>
+                        <footer class="pase-footer">
+                            <p>$100</p>
+                        </footer>
+                    </div>
+
+                    <div class="premium pase irl-ticket-card irl-ticket-card--featured" data-reveal>
+                        <p class="nombre-pase">Pase 2 Dias</p>
+                        <header class="pase-header">
+                            <p>Incluye</p>
+                        </header>
+                        <div class="pase-body">
+                            <ul>
+                                <li>Acceso a ambos escenarios</li>
+                                <li>Comida y Bebida</li>
+                                <li>Camisa del Evento</li>
+                                <li>Acceso VIP</li>
+                            </ul>
+                        </div>
+                        <footer class="pase-footer">
+                            <p>$180</p>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="irl-final-cta" aria-label="Cierre del festival">
+            <svg class="irl-final-cta__circle" viewBox="0 0 900 900" aria-hidden="true">
+                <defs>
+                    <path id="irlCirclePath" d="M450,450 m-330,0 a330,330 0 1,1 660,0 a330,330 0 1,1 -660,0" />
+                </defs>
+                <text>
+                    <textPath href="#irlCirclePath" startOffset="0%">
+                        ROCK &amp; EDM FESTIVAL - LIVE MUSIC - NIGHT ENERGY -
+                    </textPath>
+                </text>
+            </svg>
+
+            <div class="irl-final-cta__content" data-reveal>
+                <h2 class="irl-final-cta__title">Nos vemos frente al escenario.</h2>
+                <p class="irl-final-cta__text">Reserva tu lugar y preparate para dos dias de musica, luces y comunidad.</p>
+                <a class="irl-btn irl-btn--solid" data-magnetic href="#boletos">Comprar boletos <span class="irl-btn__arrow">-&gt;</span></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer irl-footer">
+        <div class="irl-footer__top">
+            <div>
+                <div class="irl-footer__label">Ubicacion</div>
+                <p class="irl-footer__text">Antel Arena, Uruguay</p>
+            </div>
+
+            <div>
+                <div class="irl-footer__label">Fecha</div>
+                <p class="irl-footer__text">Julio 2026</p>
+            </div>
+
+            <nav class="irl-footer__links" aria-label="Footer principal">
+                <a href="#inicio">Inicio</a>
+                <a href="#experiencia">Experiencia</a>
+                <a href="#lineup">Line Up</a>
+                <a href="#galeria">Galeria</a>
+            </nav>
+
+            <nav class="irl-footer__links" aria-label="Footer secundario">
+                <a href="#boletos">Boletos</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+
+        <h2 class="irl-footer-wordmark">FESTIVAL</h2>
+
+        <div class="irl-footer__bottom">
+            <span>By Nathan de Barros</span>
+            <span>&copy; 2026 Todos los derechos reservados.</span>
+        </div>
+    </footer>
 
     <script src="build/js/app.js"></script>
+    <script defer src="build/js/design-mdnt.js"></script>
 </body>
-
 </html>
